@@ -24,4 +24,4 @@ php-snowflake extension 只支持Linux
  0.24432897567749
  [root@phpzc-net php_snowflake]#
  ```
-100w次只需要0.4秒
+100w次只需要0.24秒
