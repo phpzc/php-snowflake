@@ -8,7 +8,7 @@ php-snowflake extension 只支持Linux
 ```
     <?php
     if(!extension_loaded('php_snowflake')){
-    	die('php_snowflake loaded'.PHP_EOL);
+    	die('php_snowflake not loaded'.PHP_EOL);
     }
     $time=microtime(true);
     for($i=0;$i<1000000;$i++){
