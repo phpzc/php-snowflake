@@ -95,6 +95,7 @@ PHP_MSHUTDOWN_FUNCTION(php_snowflake)
  */
 PHP_RINIT_FUNCTION(php_snowflake)
 {
+	set_workid();
 	return SUCCESS;
 }
 /* }}} */

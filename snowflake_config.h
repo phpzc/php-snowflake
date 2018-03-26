@@ -10,7 +10,7 @@
 // 7位进程号取模值 计算 加起来总计10位   限制8台机器 进程数不超过128
 // 根据机器数量作取舍
 #define DEVICE_PID_NUMBER 7
-#define DEVICE_PID_NUMBER_AND 0b1111111  // DEVICE_PID_NUMBER_AND位数与 DEVICE_PID_NUMBER数值保持一致
+
 #define DEVICE_NUMBER 0b000
 
 
