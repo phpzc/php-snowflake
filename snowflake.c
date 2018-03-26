@@ -24,10 +24,11 @@ void set_workid()
     //机器号搭配进程号
     pid_t pid = getpid();
 
-    int val = (int)pid % pow_int(2,DEVICE_PID_NUMBER)  ;// 取模 需要进程数 不超过2的DEVICE_PID_NUMBER次方
+    int val = (int)pid % pow_int(2,DEVICE_PID_NUMBER)  ;// 取模 需要进程数// 不超过2的DEVICE_PID_NUMBER次方
+    val = val & DEVICE_PID_NUMBER_AND;
 
     // 自定义机器号 拼接 进程取模值  当作机器唯一标识
-    php_snowflake_workid =  ((DEVICE_NUMBER &0x3ff) << DEVICE_PID_NUMBER ) |  (val&0x3ff);
+    php_snowflake_workid =  ((DEVICE_NUMBER &0x3ff) << DEVICE_PID_NUMBER ) |  val;
 
 
 }
